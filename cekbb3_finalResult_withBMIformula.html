@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI calculation</title>
+</head>
+<body>
+    <script>
+        function cekbb(nama, bb, tb){
+            this.nama = nama;
+            this.bb = bb;
+            this.tb = tb;
+            this.cekstatus = function(){
+                tb /= 100;
+                bmi = bb / (tb * tb);
+
+                if (bmi > 27) {
+                    alert(nama + " Gemuk, Kelebihan berat badan tingkat berat");
+                    document.write(nama, " Gemuk, Kelebihan berat badan tingkat berat <br>")
+                    console.log(nama, " Gemuk, Kelebihan berat badan tingkat berat")
+                }else if ((bmi >= 25.1) & (bmi <= 27)){
+                    alert(nama+ " Gemuk, Kelebihan berat badan tingkat ringan");
+                    document.write(nama, " Gemuk, Kelebihan berat badan tingkat ringan <br>")
+                    console.log(nama, " Gemuk, Kelebihan berat badan tingkat ringan ")
+                }else if ((bmi >= 18.5) & (bmi <= 25)){
+                    alert(nama+ " Normal");
+                    document.write(nama, " Normal <br>")
+                    console.log(nama, " Normal ")
+                }else if ((bmi >= 17) & (bmi <= 18.4)){
+                    alert(nama+ " Kurus, Kekurangan berat badan tingkat ringan");
+                    document.write(nama, " Kurus, Kekurangan berat badan tingkat ringan <br>")
+                    console.log(nama, " Kurus, Kekurangan berat badan tingkat ringan")
+                }else {
+                    alert(nama+ " Kurus, Kekurangan berat badan tingkat berat");
+                    document.write(nama, " Kurus, Kekurangan berat badan tingkat berat <br>")
+                    console.log(nama, " Kurus, Kekurangan berat badan tingkat berat ")
+                }
+            }
+        }
+        var romi = new cekbb(prompt("Siapa Namamu?"), prompt("Seberapa Berat Badanmu?"), prompt("Berapa Tinggi Badanmu?"))
+        console.log(romi)
+        romi.cekstatus();
+
+        var rafi = new cekbb(prompt("Siapa Namamu?"), prompt("Seberapa Berat Badanmu?"), prompt("Berapa Tinggi Badanmu?"))
+        console.log(rafi)
+        rafi.cekstatus();
+    </script>
+</body>
+</html>

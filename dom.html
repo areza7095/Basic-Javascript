@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+    <p class="paragraf">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores nisi,
+      impedit ab repudiandae, quasi velit qui similique perferendis incidunt est
+      omnis molestias beatae doloribus quas illo modi soluta dolorum. Eum!
+    </p>
+    <p class="paragraf">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi itaque
+      iusto in! Quibusdam dolores saepe et, nulla veritatis unde, praesentium
+      dolor itaque aliquam distinctio asperiores doloremque quasi eaque
+      dignissimos! Magni.
+    </p>
+    <p class="paragraf">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid saepe
+      labore quaerat incidunt eaque doloremque dolore iusto, optio enim sed.
+      Aliquam commodi unde tempore cupiditate perspiciatis, molestias magnam
+      quibusdam temporibus.
+    </p>
+    <script>
+      var a = document.getElementsByClassName("paragraf");
+      var b = document.getElementById("demo");
+      setInterval(function () {
+        b.innerHTML = "hello";
+        b.style.color = "white";
+        b.style.padding = "10px";
+        a[0].style.color = "blue";
+        a[1].style.color = "aqua";
+        a[2].style.color = "yellow";
+        b.style.backgroundcolor = "red";
+        setTimeout(function () {
+          b.innerHTML = "welcome to asia";
+          b.style.backgroundColor = "black";
+          a[0].style.color = "red";
+          a[1].style.color = "green";
+          a[2].style.color = "purple";
+        }, 500);
+      }, 1000);
+    </script>
+  </body>
+</html>

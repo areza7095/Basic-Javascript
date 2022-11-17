@@ -1,10 +1,6 @@
-var x = 20;
-
-for (i=1 ; i <= x ; i++){
-
-    if(i == 13 ){
-        continue;
+for(x=1;x<=14;x++){
+    if(x==13){
+        continue
     }
-    console.log("room number", i)
-
+    console.log('Room Number', x)
 }
